@@ -18,4 +18,15 @@ public class Register {
             }
         }
     }
+
+    public Medlem hittaMedlem(String namn){
+        for(int i=0; i<medlemmar.size(); i++){
+            Medlem m = medlemmar.get(i);
+            if(m.getNamn().equalsIgnoreCase(namn)){
+                return m;
+            }
+        }
+        System.out.println("Ingen medlem hittades!");
+        return null;
+    }
 }
