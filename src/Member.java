@@ -6,4 +6,12 @@ public class Member {
         this.namn = namn;
         this.id = id;
     }
+
+    public String getNamn() {
+        return namn;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
