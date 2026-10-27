@@ -7,6 +7,7 @@ public class Main {
         while (true){
             System.out.println("\n1. Add new member\n2. Show all members\n3. Search for member\n4. Quit");
             int option = scanner.nextInt();
+            Register register = new Register();
             scanner.nextLine();
 
             switch (option){
@@ -15,15 +16,16 @@ public class Main {
                     System.out.println("Name: ");
                     String name = scanner.nextLine();
                     System.out.println("Member ID: ");
-                    String id = scanner.nextLine();
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
 
-                    Register.addMember(name, id);
+                    register.addMedlem(name, id);
 
                     //Depending on response from register (true/false or do it already log something?)  make some output of succeded to add member
                 }
                 case 2 -> {
                     System.out.println("-------------- MEMBERS --------------");
-                    Register.listMembers();
+                    register.listaAlla();
                 }
                 case 3 -> {
                     System.out.println("-------------- SEARCH FOR MEMBER --------------");
@@ -32,14 +34,14 @@ public class Main {
                     String name = scanner.nextLine();
                     //System.out.println("Member ID: ");
                     //String id = scanner.nextLine();
-                    Member member = Register.findMember(name);
+                    Member member = register.hittaMedlem(name);
 
                     if (member == null){
                         System.out.println("-------------- MEMBER DO NOT EXIST --------------");
                     } else {
                         System.out.println("-------------- MEMBER FOUND --------------");
-                        System.out.println("Name: " + member.name());
-                        System.out.println("ID: " + member.id());
+                        System.out.println("Name: " + member.getNamn());
+                        System.out.println("ID: " + member.getId());
                     }
                 }
                 case 4 -> {
