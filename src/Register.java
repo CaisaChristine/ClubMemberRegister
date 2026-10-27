@@ -2,26 +2,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Register {
-    private List<Medlem> medlemmar = new ArrayList<>();
+    private List<Member> medlemmar = new ArrayList<>();
 
     public void addMedlem(String namn, int id){
-        Medlem medlem = new Medlem(namn, id);
+        Member medlem = new Member(namn, id);
         medlemmar.add(medlem);
     }
 
     public void listaAlla(){
-        if(medlemmar.size() = 0){
+        if(medlemmar.isEmpty()){
             System.out.println("Listan är tom!");
         } else {
-            for(Medlem m : medlemmar){
+            for(Member m : medlemmar){
                 System.out.println("Medlem: " + m.getNamn() + " | Medlemsnummer: " + m.getId());
             }
         }
     }
 
-    public Medlem hittaMedlem(String namn){
+    public Member hittaMedlem(String namn){
         for(int i=0; i<medlemmar.size(); i++){
-            Medlem m = medlemmar.get(i);
+            Member m = medlemmar.get(i);
             if(m.getNamn().equalsIgnoreCase(namn)){
                 return m;
             }
