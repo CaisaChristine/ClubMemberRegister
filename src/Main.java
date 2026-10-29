@@ -21,7 +21,6 @@ public class Main {
 
                     register.addMedlem(name, id);
 
-                    //Depending on response from register (true/false or do it already log something?)  make some output of succeded to add member
                     System.out.println("-------------- NY MEDLEM "+ name +" TILLAGD --------------");
                 }
                 case 2 -> {
@@ -30,11 +29,8 @@ public class Main {
                 }
                 case 3 -> {
                     System.out.println("-------------- SÖK EFTER MEDLEM --------------");
-                    //Depending on register function either take in ID or name. Change to ID??
                     System.out.println("Namn: ");
                     String name = scanner.nextLine();
-                    //System.out.println("Member ID: ");
-                    //String id = scanner.nextLine();
                     Member member = register.hittaMedlem(name);
 
                     if (member != null) {

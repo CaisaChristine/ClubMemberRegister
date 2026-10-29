@@ -15,7 +15,7 @@ Vi valde branches och delade upp det så alla hade ansvar över en klass-fil var
 
 ### Ett problem ni löste: Beskriv ett problem som uppstod och hur ni löste det tillsammans. Det kan vara en bugg/krock i koden eller Git, men även en utmaning kring planering och samarbete.
 
----
+Vi upptäckte att det går att lägga till flera medlemmar med samma ID, så det fixade vi med en if-check.
 
 ### Reflektion kring AI och externa hjälpmedel (ca 3–5 meningar): Har ni använt AI-verktyg eller andra källor under arbetet?
 
