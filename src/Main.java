@@ -21,7 +21,7 @@ public class Main {
 
                     register.addMedlem(name, id);
 
-                    System.out.println("-------------- NY MEDLEM "+ name +" TILLAGD --------------");
+                    //System.out.println("-------------- NY MEDLEM "+ name +" TILLAGD --------------");
                 }
                 case 2 -> {
                     System.out.println("-------------- MEDLEMMAR --------------");
@@ -31,12 +31,14 @@ public class Main {
                     System.out.println("-------------- SÖK EFTER MEDLEM --------------");
                     System.out.println("Namn: ");
                     String name = scanner.nextLine();
-                    Member member = register.hittaMedlem(name);
+                    //Member member = register.hittaMedlem(name);
+                    String member = register.hittaMedlem(name);
 
                     if (member != null) {
                         System.out.println("-------------- MEDLEM HITTADES --------------");
-                        System.out.println("Namn: " + member.getNamn());
-                        System.out.println("ID: " + member.getId());
+                        System.out.println(member);
+                    //    System.out.println("Namn: " + member.getNamn());
+                    //    System.out.println("ID: " + member.getId());
                     }
                 }
                 case 4 -> {
