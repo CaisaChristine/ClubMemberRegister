@@ -5,8 +5,6 @@ public class Register {
     private List<Member> medlemmar = new ArrayList<>();
 
     public void addMedlem(String namn, int id){
-        //Member medlem = new Member(namn, id);
-        //medlemmar.add(medlem);
         for (Member medlem : medlemmar) {
             if (medlem.getId() == id) {
                 System.out.println("Detta ID-nummer finns redan!");
@@ -34,12 +32,10 @@ public class Register {
         for(int i=0; i < medlemmar.size(); i++){
             Member m = medlemmar.get(i);
             if(m.getNamn().equalsIgnoreCase(namn)){
-                //return m;
                 resultat += "Namn: " + m.getNamn() + ", ID: " + m.getId() + "\n";
             }
         }
-        //System.out.println("Ingen medlem hittades!");
-        //return null;
+        
         if (resultat.isEmpty()) {
             System.out.println("Ingen medlem hittades!");
             return null;
